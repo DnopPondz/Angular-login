@@ -1,0 +1,40 @@
+<div
+  class="w-screen h-screen flex flex-col justify-center items-center bg-blue-950"
+>
+  <div
+    class="w-[550px] h-[500px] bg-white flex flex-col justify-center items-center gap-y-10 rounded-md drop-shadow-2xl"
+  >
+    <h1 class="text-6xl">Login Page</h1>
+    <form class="flex flex-col gap-5" >
+      <div class="flex flex-col gap-1">
+        <label class="text-xl" for="text">Username</label>
+        <input
+          class="pl-4 w-[380px] h-[45px] rounded-full border-gray-200 border-double border-2 hover:border-gray-400 hover:text-[18px]"
+          type="text"
+          [(ngModel)]="loginObj.EmailId" name="EmailId" required 
+          placeholder="Username"
+        />
+      </div>
+      <div class="flex flex-col gap-1">
+        <label class="text-xl" for="text">Password</label>
+        <input
+          class="pl-4 pr-4 w-[380px] h-[45px] rounded-full border-gray-200 border-double border-2 hover:border-gray-400 hover:text-[18px]"
+          type="password"
+          [(ngModel)]="loginObj.Password"  name="Password" required
+          placeholder="Password"
+        />
+        <a class="text-end text-sm text-blue-400 hover:text-blue-300" href="#"
+          >forgot your password?</a
+        >
+      </div>
+      <button
+      type="button" (click)="OnLogin()"
+      class="w-[380px] h-[40px] bg-blue-600 hover:bg-blue-500 rounded-full text-white"
+    >
+      Login
+    </button>
+    </form>
+    
+  </div>
+</div>
+
